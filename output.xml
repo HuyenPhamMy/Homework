@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.1 on win32)" generated="20211108 22:51:47.097" rpa="false" schemaversion="2">
+<suite id="s1" name="Bai1a" source="H:\Homework\Bai1a.robot">
+<test id="s1-t1" name="Verify that can register successfully">
+<kw name=" Register with get xpath">
+<kw name="Register">
+<arg>Huyen</arg>
+<arg>huyenpm1@smartosc.com</arg>
+<arg>Huyen123</arg>
+<arg>Huyen123</arg>
+<kw name="Open Website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211108 22:51:47.276" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20211108 22:51:47.276" endtime="20211108 22:51:50.253"/>
+</kw>
+<status status="PASS" starttime="20211108 22:51:47.276" endtime="20211108 22:51:50.253"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@id='nav-link-accountList']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:50.254" level="INFO">Clicking element 'xpath=//a[@id='nav-link-accountList']'.</msg>
+<status status="PASS" starttime="20211108 22:51:50.253" endtime="20211108 22:51:51.177"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@id='createAccountSubmit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:51.177" level="INFO">Clicking element 'xpath=//a[@id='createAccountSubmit']'.</msg>
+<status status="PASS" starttime="20211108 22:51:51.177" endtime="20211108 22:51:52.068"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='customerName']</arg>
+<arg>${your_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:52.069" level="INFO">Typing text 'Huyen' into text field 'xpath=//input[@name='customerName']'.</msg>
+<status status="PASS" starttime="20211108 22:51:52.069" endtime="20211108 22:51:52.140"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:52.140" level="INFO">Typing text 'huyenpm1@smartosc.com' into text field 'xpath=//input[@name='email']'.</msg>
+<status status="PASS" starttime="20211108 22:51:52.140" endtime="20211108 22:51:52.230"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>${pass_word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:52.230" level="INFO">Typing text 'Huyen123' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" starttime="20211108 22:51:52.230" endtime="20211108 22:51:52.306"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='passwordCheck']</arg>
+<arg>${pass_check}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:52.307" level="INFO">Typing text 'Huyen123' into text field 'xpath=//input[@name='passwordCheck']'.</msg>
+<status status="PASS" starttime="20211108 22:51:52.306" endtime="20211108 22:51:52.371"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@id='continue']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211108 22:51:52.371" level="INFO">Clicking button 'xpath=//input[@id='continue']'.</msg>
+<status status="PASS" starttime="20211108 22:51:52.371" endtime="20211108 22:51:54.023"/>
+</kw>
+<status status="PASS" starttime="20211108 22:51:47.275" endtime="20211108 22:51:54.023"/>
+</kw>
+<status status="PASS" starttime="20211108 22:51:47.275" endtime="20211108 22:51:54.023"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211108 22:52:04.024" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20211108 22:51:54.024" endtime="20211108 22:52:04.024"/>
+</kw>
+<status status="PASS" starttime="20211108 22:51:47.274" endtime="20211108 22:52:04.025"/>
+</test>
+<test id="s1-t2" name="Verify that can login successfully">
+<kw name=" Login with the account above">
+<kw name="Login">
+<arg>huyenpm1@smartosc.com</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@name='metadata1']</arg>
+<arg>${your_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:52:04.030" level="INFO">Typing text 'huyenpm1@smartosc.com' into text field 'xpath=//input[@name='metadata1']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211108 22:52:04.146" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211108 22:52:04.052" endtime="20211108 22:52:04.146"/>
+</kw>
+<msg timestamp="20211108 22:52:04.156" level="FAIL">Element with locator 'xpath=//input[@name='metadata1']' not found.</msg>
+<status status="FAIL" starttime="20211108 22:52:04.029" endtime="20211108 22:52:04.156"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@id='continue']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211108 22:52:04.157" endtime="20211108 22:52:04.157"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:52:04.029" endtime="20211108 22:52:04.157"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:52:04.028" endtime="20211108 22:52:04.158"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20211108 22:52:04.158" endtime="20211108 22:52:04.158"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:52:04.027" endtime="20211108 22:52:04.159">Element with locator 'xpath=//input[@name='metadata1']' not found.</status>
+</test>
+<status status="FAIL" starttime="20211108 22:51:47.098" endtime="20211108 22:52:04.160"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Bai1a">Bai1a</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
